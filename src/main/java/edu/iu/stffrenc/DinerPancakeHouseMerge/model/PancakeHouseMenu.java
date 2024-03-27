@@ -4,8 +4,9 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class PancakeHouseMenu implements Menu{
+public class PancakeHouseMenu extends Menu{
     List<MenuItem> menuItems;
+
 
     public PancakeHouseMenu() {
         menuItems = new ArrayList<MenuItem>();

@@ -2,7 +2,6 @@ package edu.iu.stffrenc.DinerPancakeHouseMerge.model;
 
 import java.util.HashMap;
 import java.util.Iterator;
-import java.util.Map;
 
 public class CafeMenu implements Menu{
     HashMap<String, MenuItem> menuItems = new HashMap<String, MenuItem>();
@@ -26,8 +25,8 @@ public class CafeMenu implements Menu{
         menuItems.put(name, menuItem);
     }
 
-    public Map<String, MenuItem> getItems() {
-        return menuItems;
+    public MenuItem[] getItems() {
+        return menuItems.values().toArray(new MenuItem[0]);
     }
 
     @Override
