@@ -1,4 +1,4 @@
-package edu.iu.habahram.DinerPancakeHouseMerge.model;
+package edu.iu.stffrenc.DinerPancakeHouseMerge.model;
 
 public class MenuItem {
     String name;

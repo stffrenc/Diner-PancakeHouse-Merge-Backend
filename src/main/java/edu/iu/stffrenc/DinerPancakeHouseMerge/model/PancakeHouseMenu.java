@@ -1,4 +1,4 @@
-package edu.iu.habahram.DinerPancakeHouseMerge.model;
+package edu.iu.stffrenc.DinerPancakeHouseMerge.model;
 
 import java.util.ArrayList;
 import java.util.List;
