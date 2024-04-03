@@ -7,6 +7,8 @@ public abstract class Menu extends MenuComponent{
     String name;
     String description;
 
+    public Menu(){}
+
     public Menu(String name, String description) {
         this.name = name;
         this.description = description;

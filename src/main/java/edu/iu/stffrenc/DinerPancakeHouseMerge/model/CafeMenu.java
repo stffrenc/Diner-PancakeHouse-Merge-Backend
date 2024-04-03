@@ -3,7 +3,7 @@ package edu.iu.stffrenc.DinerPancakeHouseMerge.model;
 import java.util.HashMap;
 import java.util.Iterator;
 
-public class CafeMenu implements Menu{
+public class CafeMenu extends Menu {
     HashMap<String, MenuItem> menuItems = new HashMap<String, MenuItem>();
 
     public CafeMenu() {
