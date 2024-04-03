@@ -30,8 +30,8 @@ public class CafeMenu extends Menu {
     }
 
     @Override
-    public Iterator<MenuItem> createIterator() {
-        return menuItems.values().iterator();
+    public Iterator<MenuComponent> createIterator() {
+        return (CompositeIterator) menuItems.values().iterator();
     }
 
 

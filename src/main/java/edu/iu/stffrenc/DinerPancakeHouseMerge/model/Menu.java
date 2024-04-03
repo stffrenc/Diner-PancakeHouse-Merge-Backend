@@ -3,6 +3,7 @@ package edu.iu.stffrenc.DinerPancakeHouseMerge.model;
 import java.util.*;
 
 public abstract class Menu extends MenuComponent{
+    Iterator<MenuComponent> iterator = null;
     ArrayList<MenuComponent> menuComponents = new ArrayList<MenuComponent>();
     String name;
     String description;
@@ -23,7 +24,7 @@ public abstract class Menu extends MenuComponent{
     }
 
     public MenuComponent getChild(int i) {
-        return (MenuComponent)menuComponents.get(i);
+        return menuComponents.get(i);
     }
 
     public String getName() {
@@ -45,5 +46,12 @@ public abstract class Menu extends MenuComponent{
         return  menuItemList.toArray(new MenuItem[menuItemList.size()]);
     }
 
-    public abstract Iterator<MenuItem> createIterator();
+
+
+    public Iterator<MenuComponent> createIterator() {
+        if(iterator == null){
+            iterator = new CompositeIterator(menuComponents.iterator());
+        }
+        return iterator;
+    }
 }

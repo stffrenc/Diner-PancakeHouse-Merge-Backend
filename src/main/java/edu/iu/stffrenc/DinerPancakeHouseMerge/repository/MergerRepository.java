@@ -3,7 +3,6 @@ package edu.iu.stffrenc.DinerPancakeHouseMerge.repository;
 import edu.iu.stffrenc.DinerPancakeHouseMerge.model.*;
 import org.springframework.stereotype.Repository;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
@@ -13,7 +12,7 @@ public class MergerRepository {
     public List<MenuItemRecord> getTheMenuItems() {
         MenuComponent allMenus = new Menu("ALL MENUS", "All menus combined") {
             @Override
-            public Iterator<MenuItem> createIterator() {
+            public Iterator<MenuComponent> createIterator() {
                 return null;
             }
         };
@@ -28,4 +27,7 @@ public class MergerRepository {
                         x.getPrice())).toList();
         return records;
     }
+
+
+
 }

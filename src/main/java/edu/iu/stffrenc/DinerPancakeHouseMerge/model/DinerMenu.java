@@ -50,7 +50,7 @@ public class DinerMenu extends Menu{
         return  stringBuilder.toString();
     }
 
-    public Iterator<MenuItem> createIterator() {
+    public Iterator<MenuComponent> createIterator() {
         return new DinerMenuIterator(getMenuItems());
     }
 

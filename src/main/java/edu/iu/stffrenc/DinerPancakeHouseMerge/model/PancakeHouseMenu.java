@@ -54,7 +54,7 @@ public class PancakeHouseMenu extends Menu{
     }
 
     @Override
-    public Iterator<MenuItem> createIterator() {
+    public Iterator<MenuComponent> createIterator() {
         return menuItems.iterator();
     }
 }
