@@ -1,5 +1,6 @@
 package edu.iu.stffrenc.DinerPancakeHouseMerge.model;
 
+import java.util.Arrays;
 import java.util.Iterator;
 
 public class DinerMenu extends Menu{
@@ -47,9 +48,11 @@ public class DinerMenu extends Menu{
         return  stringBuilder.toString();
     }
 
+    @Override
     public Iterator<MenuComponent> createIterator() {
-        return new DinerMenuIterator(menuItems);
+        return (CompositeIterator) Arrays.asList(menuItems).iterator();
     }
+
 
     // other menu methods here
 }
