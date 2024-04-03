@@ -50,8 +50,9 @@ public class DinerMenu extends Menu{
 
     @Override
     public Iterator<MenuComponent> createIterator() {
-        return (CompositeIterator) Arrays.asList(menuItems).iterator();
+        return new CompositeIterator(Arrays.asList(menuItems).iterator());
     }
+
 
 
     // other menu methods here

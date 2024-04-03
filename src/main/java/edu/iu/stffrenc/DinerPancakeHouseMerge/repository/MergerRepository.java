@@ -28,7 +28,7 @@ public class MergerRepository {
     }
 
     public List<MenuItemRecord> getBreakfastItems(){
-        MenuComponent allMenus = new Menu("ALL MENUS", "All menus combined") {
+        MenuComponent allMenus = new Menu("BREAKFAST MENU", "All Breakfast items") {
             @Override
             public Iterator<MenuComponent> createIterator() {
                 return null;
@@ -45,7 +45,7 @@ public class MergerRepository {
     }
 
     public List<MenuItemRecord> getDinnerItems(){
-        MenuComponent allMenus = new Menu("ALL MENUS", "All menus combined") {
+        MenuComponent allMenus = new Menu("DINNER MENU", "All Dinner items") {
             @Override
             public Iterator<MenuComponent> createIterator() {
                 return null;
@@ -62,7 +62,7 @@ public class MergerRepository {
     }
 
     public List<MenuItemRecord> getLunchItems(){
-        MenuComponent allMenus = new Menu("ALL MENUS", "All menus combined") {
+        MenuComponent allMenus = new Menu("LUNCH MENU", "All Lunch items") {
             @Override
             public Iterator<MenuComponent> createIterator() {
                 return null;
