@@ -36,7 +36,7 @@ public class MergerController {
         return mergerRepository.getLunchItems();
     }
 
-    @GetMapping("/dinner")
+    @GetMapping("/diner")
     public List<MenuItemRecord> getDinnerItems(){
         return mergerRepository.getDinnerItems();
     }
