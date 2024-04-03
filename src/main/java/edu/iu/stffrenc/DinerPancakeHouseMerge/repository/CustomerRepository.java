@@ -19,7 +19,7 @@ import java.util.List;
 public class CustomerRepository {
     private static final Logger LOG = LoggerFactory.getLogger(CustomerRepository.class);
     private static final String NEW_LINE = System.lineSeparator();
-    private static final String DATABASE_NAME = "ducks/customers.txt";
+    private static final String DATABASE_NAME = "customers/customers.txt";
 
     public CustomerRepository() {
         File file = new File(DATABASE_NAME);
