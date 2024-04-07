@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @CrossOrigin
@@ -26,20 +27,38 @@ public class MergerController {
         return items;
     }
 
+
     @GetMapping("/breakfast")
-    public List<MenuItemRecord> getBreakfastItems() {
-        return mergerRepository.getBreakfastItems();
+    public List<MenuItemRecord> getBreakfastItems(){
+        List<MenuItemRecord> breakfastItems = mergerRepository.getTheMenuItems().stream()
+                .filter(item -> item.description().toLowerCase().contains("breakfast") || item.name().toLowerCase().contains("breakfast"))
+                .collect(Collectors.toList());
+        return breakfastItems;
     }
+
 
     @GetMapping("/lunch")
-    public List<MenuItemRecord> getLunchItems() {
-        return mergerRepository.getLunchItems();
+    public List<MenuItemRecord> getLunchItems(){
+        List<MenuItemRecord> lunchItems = mergerRepository.getTheMenuItems().stream()
+                .filter(item -> item.name().toLowerCase().contains("lunch"))
+                .collect(Collectors.toList());
+        return lunchItems;
     }
+
 
     @GetMapping("/diner")
-    public List<MenuItemRecord> getDinnerItems(){
-        return mergerRepository.getDinnerItems();
+    public List<MenuItemRecord> getSupperItems() {
+        List<MenuItemRecord> supperItems = mergerRepository.getTheMenuItems().stream()
+                .filter(item -> item.name().toLowerCase().contains("dinner"))
+                .collect(Collectors.toList());
+        return supperItems;
+    }
+
+    @GetMapping("/vegetarian")
+    public List<MenuItemRecord> getVegetarianItems(){
+        List<MenuItemRecord> vegetarianItems = mergerRepository.getTheMenuItems().stream()
+                .filter(item -> item.description().toLowerCase().contains("vegetarian") || item.name().toLowerCase().contains("vegetarian") || item.name().toLowerCase().contains("veggies") || item.description().toLowerCase().contains("veggies") || item.name().toLowerCase().contains("veggie") || item.description().toLowerCase().contains("veggie"))
+                .collect(Collectors.toList());
+        return vegetarianItems;
     }
 }
-
-
